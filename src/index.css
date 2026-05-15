@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --font-dicor: "Freckle Face", system-ui;
+  --font-global: "Inter", sans-serif;
+  --common: #DFF2FF;
+  --uncommon: #D2EBD5;
+  --rare: #F6D7CC;
+  --epic: #E7D9F3;
+}
+
+
+button {
+  @apply cursor-pointer
+}
+body{
+  font-family: var(--font-global);
+}
