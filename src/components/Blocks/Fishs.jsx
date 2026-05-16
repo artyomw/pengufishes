@@ -6,30 +6,13 @@ import { useMemo, useState } from "react";
 export function Fishs() {
 
   const [searchParams] = useSearchParams();
-
   const [value, setValue] = useState('')
 
-  // const filteredByCategory = category
-  //   ? list.filter(item => item.category === category)
-  //   : list;
-
-
-  // const filteredFishes = filteredByCategory.filter(item =>
-  //   item.name.toLowerCase().includes(value.toLowerCase())
-  // );
-
-  // const filtered = useMemo(() => {
-  //   const category = searchParams.get('category');
-  //   return list.filter(item => {
-  //     return (!category || item.category === category) && item.name.includes(value)
-  //   })
-  // }
-  //   , [searchParams, value])
 
   const filtered = useMemo(() => {
     const category = searchParams.get('category');
     return list.filter(item => {
-      return (category == null || category == 'all' || item.category == category) && item.name.includes(value);
+      return (category == null || category == 'all' || item.category == category) && item.name.toLocaleLowerCase().includes(value.toLocaleLowerCase());
     })
   }
     , [searchParams, value])
