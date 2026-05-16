@@ -69,7 +69,6 @@ export function Fishs() {
             : <div className="w-full h-full flex items-center justify-center">
               <video src="/icons/notfounded.webm" loop autoPlay muted></video>
             </div>}
-
         </>
       </div>
     </section>

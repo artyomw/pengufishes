@@ -4,7 +4,6 @@ import { fishes } from "../../data/fishs";
 export function Fish() {
   const navigate = useNavigate()
   const { name } = useParams();
-  console.log(name)
 
   const fish = fishes.find(item => item.name === name);
 
